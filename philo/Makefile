@@ -1,6 +1,6 @@
 NAME			=		philo
 CC				=		clang
-FLAGS			=		-g -Wall -Werror -Wextra -I $(HEADER) -fsanitize=thread
+FLAGS			=		-g -Wall -Werror -Wextra -I $(HEADER) #-fsanitize=address
 
 HEADER          =		./inc/
 SRCS            =		src/main.c									\
