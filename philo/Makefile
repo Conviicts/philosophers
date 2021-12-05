@@ -1,8 +1,8 @@
 NAME			=		philo
 CC				=		clang
-FLAGS			=		-g -Wall -Werror -Wextra -I $(HEADER) #-fsanitize=address
+FLAGS			=		-g -Wall -Werror -Wextra -I $(dir $(HEADER)) #-fsanitize=address
 
-HEADER          =		./inc/
+HEADER          =		./inc/philo.h
 SRCS            =		src/main.c									\
 						src/utils.c									\
 						src/init.c									\
