@@ -6,7 +6,7 @@
 /*   By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 00:09:29 by jode-vri          #+#    #+#             */
-/*   Updated: 2021/12/03 02:31:04 by jode-vri         ###   ########.fr       */
+/*   Updated: 2021/12/05 17:29:57 by jode-vri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ typedef struct s_table
 int			ft_atoi(const char *str);
 void		message(t_table *table, int id, char *s);
 long long	get_time(void);
-long long	time_diff(long long past, long long pres);
+long long	time_cmp(long long past, long long pres);
 void		sleeep(long long time, t_table *table);
 
 int			start(t_table *table);

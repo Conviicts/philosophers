@@ -6,7 +6,7 @@
 /*   By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 00:06:38 by jode-vri          #+#    #+#             */
-/*   Updated: 2021/12/05 15:35:59 by jode-vri         ###   ########.fr       */
+/*   Updated: 2021/12/05 17:29:57 by jode-vri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ long long	get_time(void)
 	return ((t.tv_sec * 1000) + (t.tv_usec / 1000));
 }
 
-long long	time_diff(long long past, long long pres)
+long long	time_cmp(long long a, long long b)
 {
-	return (pres - past);
+	return (b - a);
 }
 
 void	sleeep(long long time, t_table *table)
@@ -59,7 +59,7 @@ void	sleeep(long long time, t_table *table)
 		if (table->someone_died)
 			break ;
 		pthread_mutex_unlock(&table->lock);
-		if (time_diff(i, get_time()) >= time)
+		if (time_cmp(i, get_time()) >= time)
 			break ;
 		usleep(50);
 	}

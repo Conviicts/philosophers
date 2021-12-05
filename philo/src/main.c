@@ -6,7 +6,7 @@
 /*   By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 00:10:22 by jode-vri          #+#    #+#             */
-/*   Updated: 2021/12/05 15:35:29 by jode-vri         ###   ########.fr       */
+/*   Updated: 2021/12/05 17:29:57 by jode-vri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	checker2(t_table *table, t_philo *p, int i)
 	while (++i < table->philo_count && !(table->someone_died))
 	{
 		pthread_mutex_lock(&table->lock);
-		if (time_diff(p[i].last_eat, get_time()) > table->time_death)
+		if (time_cmp(p[i].last_eat, get_time()) > table->time_death)
 		{
 			message(table, i, "died");
 			pthread_mutex_lock(&(table->write));
