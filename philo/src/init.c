@@ -6,7 +6,7 @@
 /*   By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 00:06:20 by jode-vri          #+#    #+#             */
-/*   Updated: 2021/12/05 15:35:25 by jode-vri         ###   ########.fr       */
+/*   Updated: 2021/12/06 02:54:01 by jode-vri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	init(t_table *table, char **av)
 	table->check = 0;
 	table->someone_died = 0;
 	if (table->philo_count < 1 || table->time_death < 0 || table->time_eat < 0
-		|| table->time_sleep < 0 || table->philo_count > 250)
+		|| table->time_sleep < 0 || table->philo_count > 200)
 		return (0);
 	if (av[5])
 	{
